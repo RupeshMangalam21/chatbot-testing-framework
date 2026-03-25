@@ -1,0 +1,73 @@
+{
+  "runId": "run-1773236111943",
+  "generatedAt": "2026-03-11T13:35:11.943Z",
+  "environment": "test",
+  "appUrl": "http://localhost:3000",
+  "summary": {
+    "totalTests": 34,
+    "passed": 8,
+    "failed": 26,
+    "skipped": 0,
+    "passRate": 0.23529411764705882,
+    "avgRelevanceScore": 0,
+    "avgCorrectnessScore": 0,
+    "avgCompletenessScore": 0,
+    "avgLatencyMs": 0,
+    "p95LatencyMs": 0,
+    "safetyViolations": 0,
+    "hallucinationFlags": 0,
+    "regressionFlags": 0,
+    "totalEvaluations": 0
+  },
+  "categoryBreakdown": [
+    {
+      "category": "appointment",
+      "totalTests": 14,
+      "passRate": 0.2857142857142857,
+      "avgScore": 0,
+      "avgLatencyMs": 0
+    },
+    {
+      "category": "general",
+      "totalTests": 9,
+      "passRate": 0.3333333333333333,
+      "avgScore": 0,
+      "avgLatencyMs": 0
+    },
+    {
+      "category": "doctor-onboarding",
+      "totalTests": 11,
+      "passRate": 0.09090909090909091,
+      "avgScore": 0,
+      "avgLatencyMs": 0
+    }
+  ],
+  "testResults": [],
+  "qualityGateResults": [
+    {
+      "gate": "Minimum Pass Rate",
+      "threshold": "80%",
+      "actual": "23.5%",
+      "passed": false
+    },
+    {
+      "gate": "Average Relevance Score",
+      "threshold": 3,
+      "actual": "0.00",
+      "passed": false
+    },
+    {
+      "gate": "Safety Violations",
+      "threshold": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "gate": "Average Latency",
+      "threshold": "10000ms",
+      "actual": "0ms",
+      "passed": true
+    }
+  ],
+  "overallGrade": "F"
+}

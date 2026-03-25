@@ -1,0 +1,43 @@
+Chatbot Widget Diagnostic Report
+Generated: 2026-03-11T07:50:04.498Z
+Target: http://localhost:3000
+
+[OK] Page loaded — HTTP 200
+[WARN] No chatbot.com <script> tags in DOM — TextWidget may not be rendering
+[INFO] All script src values on page (23):
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_9212ccad._.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_1dd7fb59.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_a0e4c7b4._.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_%40swc_helpers_cjs_d80fb378._.js
+[INFO]    http://localhost:3000/_next/static/chunks/_a0ff3932._.js
+[INFO]    http://localhost:3000/_next/static/chunks/turbopack-_23a915ee._.js
+[INFO]    http://localhost:3000/_next/static/chunks/node_modules_next_dist_be32b49c._.js
+[WARN] Found 0 div/section element(s) with "chat" or "widget" in class/id
+[OK] navigator.webdriver = undefined (stealth working)
+[OK] ChatBot.com/widget network requests detected (22):
+[INFO]    GET http://localhost:3000/_next/static/chunks/node_modules_%40livechat_widget-react_dist_widget-react_esm_b73c9e7f.js
+[INFO]    GET http://localhost:3000/_next/static/chunks/node_modules_%40livechat_widget-react_dist_widget-react_esm_11d82b04.js
+[INFO]    GET https://cdn.livechatinc.com/tracking.js
+[INFO]    GET https://api.livechatinc.com/global-mapper/organization_id/4629d899-4cfa-4af2-8fe3-5bf01cda0535/region?jsonp=__lc_region
+[INFO]    GET https://api.livechatinc.com/v3.6/customer/action/get_dynamic_configuration?x-region=us-south1&organization_id=4629d899-4cfa-4af2-8fe3-5bf01cda0535&client_id=c5e4f61e1a6c3b1521b541bc5c5a2ac5&url=http%3A%2F%2Flocalhost%3A3000%2F&channel_type=code&origin=text&implementation_type=%40livechat%2Fwidget-react&jsonp=__ikphgjrjw3
+[OK] Found 2 iframe(s) on page
+[OK] iframe[0]: src="https://secure.livechatinc.com/customer/action/open_chat?group=0&embedded=1&widg" id="chat-widget" title="LiveChat chat widget" visible=false
+[WARN]           size: zero/off-screen — widget may be hidden
+[OK]    ✨ This looks like the chatbot iframe!
+[INFO]    Suggested selector for framework.config.ts:
+[INFO]      iframe[src*="secure.livechatinc.com"]
+[INFO]      iframe#chat-widget
+[INFO]      iframe[title="LiveChat chat widget"]
+[OK] iframe[1]: src="undefined" id="chat-widget-minimized" title="LiveChat chat widget" visible=true
+[INFO]           size: 254×484 at (1026,416)
+[OK]    ✨ This looks like the chatbot iframe!
+[INFO]    Suggested selector for framework.config.ts:
+[INFO]      iframe#chat-widget-minimized
+[INFO]      iframe[title="LiveChat chat widget"]
+[OK] No console errors
+[OK] No CSP header (good — widget can load freely)
+[OK] Full-page screenshot saved: D:\New folder\chatbot-testing-framework\diagnose-output\diagnose-screenshot.png
+[INFO] iframe[1] screenshot: D:\New folder\chatbot-testing-framework\diagnose-output\iframe-1-screenshot.png

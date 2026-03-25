@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+
+# Test artifacts
+playwright-report/
+test-artifacts/
+chatbot-reports/evaluations/
+
+# Baselines — commit only when intentionally updating
+test-data/baselines/
+
+# OS
+.DS_Store
+Thumbs.db

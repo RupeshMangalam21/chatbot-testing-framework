@@ -1,0 +1,83 @@
+[
+  {
+    "id": "EDGE-001",
+    "prompt": "",
+    "expectedIntent": "empty prompt handling",
+    "expectedKeywords": ["help", "assist", "question", "type"],
+    "category": "empty-prompt",
+    "tags": ["edge-case"]
+  },
+  {
+    "id": "EDGE-002",
+    "prompt": "   ",
+    "expectedIntent": "whitespace-only prompt handling",
+    "expectedKeywords": ["help", "assist", "question"],
+    "category": "empty-prompt",
+    "tags": ["edge-case"]
+  },
+  {
+    "id": "EDGE-003",
+    "prompt": "😀🏥👨‍⚕️📅🔔",
+    "expectedIntent": "emoji-only prompt handling",
+    "expectedKeywords": ["help", "question", "understand"],
+    "category": "emoji-prompt",
+    "tags": ["edge-case", "unicode"]
+  },
+  {
+    "id": "EDGE-004",
+    "prompt": "How do I book an appointment? 📅 I need to see a doctor 🩺 ASAP!!!",
+    "expectedIntent": "appointment booking with emojis",
+    "expectedKeywords": ["book", "appointment", "schedule"],
+    "category": "emoji-prompt",
+    "tags": ["edge-case", "unicode"]
+  },
+  {
+    "id": "EDGE-005",
+    "prompt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expectedIntent": "nonsense text handling",
+    "expectedKeywords": ["help", "understand", "question"],
+    "category": "edge-case",
+    "tags": ["edge-case", "nonsense"]
+  },
+  {
+    "id": "EDGE-006",
+    "prompt": "I want to book an appointment but I need to reschedule my existing appointment which I also want to cancel and then rebook for a different time next week or maybe the week after but I'm not sure because my schedule is complicated and also I want to know about your cancellation policy and whether there are any fees and what happens if I need to cancel within 24 hours and also whether I can book multiple appointments at once for different family members and what the process is for that specific case.",
+    "expectedIntent": "complex multi-intent query",
+    "expectedKeywords": ["appointment", "reschedule", "cancel", "book"],
+    "category": "long-prompt",
+    "tags": ["edge-case", "multi-intent"],
+    "maxLatencyMs": 45000
+  },
+  {
+    "id": "EDGE-007",
+    "prompt": "Comment puis-je prendre un rendez-vous?",
+    "expectedIntent": "appointment booking (French)",
+    "expectedKeywords": ["appointment", "book", "rendez-vous"],
+    "category": "multilingual",
+    "tags": ["edge-case", "french"]
+  },
+  {
+    "id": "EDGE-008",
+    "prompt": "¿Cómo puedo reservar una cita?",
+    "expectedIntent": "appointment booking (Spanish)",
+    "expectedKeywords": ["appointment", "book", "cita"],
+    "category": "multilingual",
+    "tags": ["edge-case", "spanish"]
+  },
+  {
+    "id": "EDGE-009",
+    "prompt": "BOOK AN APPOINTMENT NOW!!!",
+    "expectedIntent": "appointment booking (all caps)",
+    "expectedKeywords": ["book", "appointment", "schedule"],
+    "category": "edge-case",
+    "tags": ["edge-case", "caps"]
+  },
+  {
+    "id": "EDGE-010",
+    "prompt": "...",
+    "expectedIntent": "punctuation-only prompt handling",
+    "expectedKeywords": ["help", "question"],
+    "category": "edge-case",
+    "tags": ["edge-case"]
+  }
+]

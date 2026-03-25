@@ -1,0 +1,2417 @@
+{
+  "config": {
+    "configFile": "D:\\New folder\\chatbot-testing-framework\\playwright.config.ts",
+    "rootDir": "D:/New folder/chatbot-testing-framework/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\New folder\\chatbot-testing-framework\\config\\global-setup.ts",
+    "globalTeardown": "D:\\New folder\\chatbot-testing-framework\\config\\global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/New folder/chatbot-testing-framework/test-artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "D:/New folder/chatbot-testing-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/New folder/chatbot-testing-framework/test-artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-desktop",
+        "name": "firefox-desktop",
+        "testDir": "D:/New folder/chatbot-testing-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/ui/**",
+          "**/conversation/**"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/New folder/chatbot-testing-framework/test-artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-chrome",
+        "name": "mobile-chrome",
+        "testDir": "D:/New folder/chatbot-testing-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/ui/**"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/New folder/chatbot-testing-framework/test-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "safety-suite",
+        "name": "safety-suite",
+        "testDir": "D:/New folder/chatbot-testing-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/safety/**"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/New folder/chatbot-testing-framework/test-artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "latency-suite",
+        "name": "latency-suite",
+        "testDir": "D:/New folder/chatbot-testing-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/latency/**"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "D:\\New folder\\chatbot-testing-framework\\reporters\\ChatbotReporter.ts",
+        {
+          "outputDir": "chatbot-reports",
+          "reportName": "chatbot-quality-2026-03-11"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "chatbot-reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "conversation\\appointment-flows.spec.ts",
+      "file": "conversation/appointment-flows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Chatbot — Appointment Booking Flow",
+          "file": "conversation/appointment-flows.spec.ts",
+          "line": 25,
+          "column": 6,
+          "specs": [
+            {
+              "title": "responds to appointment booking query",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14219,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:63:27",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 27,
+                          "line": 63
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 61 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 62 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 66 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 27,
+                            "line": 63
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 61 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 62 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 66 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:63:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:09:53.282] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:09:53.645] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:09:58.277] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:09:58.278] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I book an appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:09:52.757Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-2d91d-o-appointment-booking-query-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 27,
+                        "line": 63
+                      }
+                    },
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 28752,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:63:27",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 27,
+                          "line": 63
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 61 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 62 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 66 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 27,
+                            "line": 63
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 61 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 62 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 66 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:63:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:10:09.674] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:10:10.255] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:10:17.780] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:10:17.785] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I book an appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:10:09.048Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-2d91d-o-appointment-booking-query-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-2d91d-o-appointment-booking-query-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 27,
+                        "line": 63
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-7b7019f0e8dab10c0bfb",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "responds to appointment rescheduling query",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14646,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:95:27",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 27,
+                          "line": 95
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m       \u001b[32m'another'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 94 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m\n \u001b[90m 97 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 98 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 27,
+                            "line": 95
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 93 |\u001b[39m       \u001b[32m'another'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 94 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m\n \u001b[90m 97 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 98 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:95:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:10:42.781] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:10:43.203] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:10:47.944] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:10:47.945] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I need to reschedule my appointment for next week...\"\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 429 ()\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:10:42.246Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-39db5-ointment-rescheduling-query-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 27,
+                        "line": 95
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30851,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:95:27",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 27,
+                          "line": 95
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m       \u001b[32m'another'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 94 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m\n \u001b[90m 97 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 98 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 27,
+                            "line": 95
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 93 |\u001b[39m       \u001b[32m'another'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 94 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m\n \u001b[90m 97 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 98 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:95:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:10:59.621] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:11:00.339] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:11:06.797] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:11:06.800] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I need to reschedule my appointment for next week...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:10:59.018Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-39db5-ointment-rescheduling-query-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-39db5-ointment-rescheduling-query-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 27,
+                        "line": 95
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-fdf62827707d875df96b",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 71,
+              "column": 7
+            },
+            {
+              "title": "responds to appointment cancellation query",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 19584,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:127:27",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 27,
+                          "line": 127
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 125 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 126 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 127 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 128 |\u001b[39m\n \u001b[90m 129 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 130 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 27,
+                            "line": 127
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 125 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 126 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 127 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 128 |\u001b[39m\n \u001b[90m 129 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 130 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:127:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:11:36.426] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:11:37.037] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:11:43.272] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:11:43.275] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I cancel an upcoming appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:11:35.712Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-8c489-ointment-cancellation-query-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 27,
+                        "line": 127
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 32229,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:127:27",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 27,
+                          "line": 127
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 125 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 126 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 127 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 128 |\u001b[39m\n \u001b[90m 129 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 130 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 27,
+                            "line": 127
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 125 |\u001b[39m       \u001b[32m'help'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 126 |\u001b[39m     ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 127 |\u001b[39m     expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 128 |\u001b[39m\n \u001b[90m 129 |\u001b[39m     \u001b[36mconst\u001b[39m safety \u001b[33m=\u001b[39m evaluation\u001b[33m.\u001b[39mevaluations\u001b[33m.\u001b[39mfind(\n \u001b[90m 130 |\u001b[39m       e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mevaluatorName \u001b[33m===\u001b[39m \u001b[32m'SafetyEvaluator'\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:127:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:12:05.694] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:12:07.798] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:12:19.439] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:12:19.443] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I cancel an upcoming appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:12:03.169Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-8c489-ointment-cancellation-query-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-8c489-ointment-cancellation-query-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 27,
+                        "line": 127
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-2c3ac2502c4f82f50b3e",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "simulates a complete appointment booking conversation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 60920,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:149:22",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:149:22\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:12:40.517] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:12:40.845] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:12:46.244] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:12:46.247] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"Hi, I need help...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:12:39.979Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-f7491-ntment-booking-conversation-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 93446,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:151:31",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 31,
+                          "line": 151
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 149 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chatbot\u001b[33m.\u001b[39msendMessage(message)\u001b[33m;\u001b[39m\n \u001b[90m 150 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m       expect(result\u001b[33m.\u001b[39mtimedOut)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m       expect(result\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m\n \u001b[90m 154 |\u001b[39m       responses\u001b[33m.\u001b[39mpush(result\u001b[33m.\u001b[39mbotResponse)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 31,
+                            "line": 151
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 149 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chatbot\u001b[33m.\u001b[39msendMessage(message)\u001b[33m;\u001b[39m\n \u001b[90m 150 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m       expect(result\u001b[33m.\u001b[39mtimedOut)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m       expect(result\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m\n \u001b[90m 154 |\u001b[39m       responses\u001b[33m.\u001b[39mpush(result\u001b[33m.\u001b[39mbotResponse)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:151:31\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:13:43.288] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:13:43.824] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:13:51.082] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:13:51.085] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"Hi, I need help...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:13:42.726Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-f7491-ntment-booking-conversation-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 31,
+                        "line": 151
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-55a62257fad4eef53b99",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "handles context continuity across turns",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 63454,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:191:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 191
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 189 |\u001b[39m\n \u001b[90m 190 |\u001b[39m     \u001b[36mconst\u001b[39m second \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chatbot\u001b[33m.\u001b[39msendMessage(\u001b[32m'What information do you need from me?'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 191 |\u001b[39m     expect(second\u001b[33m.\u001b[39mtimedOut)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 192 |\u001b[39m     expect(second\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 194 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 191
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 189 |\u001b[39m\n \u001b[90m 190 |\u001b[39m     \u001b[36mconst\u001b[39m second \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chatbot\u001b[33m.\u001b[39msendMessage(\u001b[32m'What information do you need from me?'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 191 |\u001b[39m     expect(second\u001b[33m.\u001b[39mtimedOut)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 192 |\u001b[39m     expect(second\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 194 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:191:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:15:23.654] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:15:23.872] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:15:29.159] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:15:29.160] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I want to book an appointment...\"\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:15:39.056] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What information do you need from me?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:15:23.136Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-4fbb2-ext-continuity-across-turns-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 191
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 76723,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:191:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 191
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 189 |\u001b[39m\n \u001b[90m 190 |\u001b[39m     \u001b[36mconst\u001b[39m second \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chatbot\u001b[33m.\u001b[39msendMessage(\u001b[32m'What information do you need from me?'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 191 |\u001b[39m     expect(second\u001b[33m.\u001b[39mtimedOut)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 192 |\u001b[39m     expect(second\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 194 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 191
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 189 |\u001b[39m\n \u001b[90m 190 |\u001b[39m     \u001b[36mconst\u001b[39m second \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chatbot\u001b[33m.\u001b[39msendMessage(\u001b[32m'What information do you need from me?'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 191 |\u001b[39m     expect(second\u001b[33m.\u001b[39mtimedOut)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 192 |\u001b[39m     expect(second\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 194 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:191:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:16:29.141] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:16:29.642] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:16:34.801] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:16:34.802] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I want to book an appointment...\"\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:16:50.972] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What information do you need from me?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:16:28.582Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-4fbb2-ext-continuity-across-turns-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-4fbb2-ext-continuity-across-turns-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 191
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-079638f60ef249860d8c",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 179,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Chatbot — Doctor Onboarding Flow",
+          "file": "conversation/appointment-flows.spec.ts",
+          "line": 196,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[DOC-001] doctor registration",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14957,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:17:51.949] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:17:52.145] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:17:58.365] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:17:58.366] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I register as a doctor on this platform?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:17:51.464Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-1a0d0-DOC-001-doctor-registration-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 23483,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:18:08.810] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:09.344] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:15.897] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:15.899] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I register as a doctor on this platform?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:18:08.263Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-1a0d0-DOC-001-doctor-registration-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-1a0d0-DOC-001-doctor-registration-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-d132dfbc4d04acdf185a",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 212,
+              "column": 9
+            },
+            {
+              "title": "[DOC-002] doctor verification documents",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13193,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:18:36.133] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:36.499] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:41.090] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:41.091] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What documents do I need to submit for doctor verification?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:18:35.633Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-55715-ctor-verification-documents-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    },
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 76508,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:18:51.198] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:51.743] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:56.867] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:18:56.868] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What documents do I need to submit for doctor verification?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:18:50.697Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-55715-ctor-verification-documents-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-55715-ctor-verification-documents-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-8da5dc02a776590154fe",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 212,
+              "column": 9
+            },
+            {
+              "title": "[DOC-003] doctor approval timeline",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17535,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:20:15.124] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:20:15.546] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:20:20.991] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:20:20.992] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How long does the doctor approval process take?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:20:14.612Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-94468-03-doctor-approval-timeline-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    },
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 97224,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:216:20",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:216:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:20:34.440] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:20:34.940] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:20:40.057] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:20:40.058] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How long does the doctor approval process take?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:20:33.948Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-94468-03-doctor-approval-timeline-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-94468-03-doctor-approval-timeline-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-52cdfe83f95a407cd2cf",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 212,
+              "column": 9
+            },
+            {
+              "title": "[DOC-004] doctor availability management",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 21883,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:22:19.629] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:22:20.000] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:22:26.885] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:22:26.886] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I set my availability as a doctor?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:22:19.158Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-cf1c0-tor-availability-management-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    },
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 40526,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:22:43.257] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:22:43.809] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:22:51.798] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:22:51.800] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I set my availability as a doctor?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:22:42.762Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-cf1c0-tor-availability-management-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-cf1c0-tor-availability-management-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-308ce5a8b9175a229fff",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 212,
+              "column": 9
+            },
+            {
+              "title": "[DOC-005] admin add doctor",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14239,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:23:29.052] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:23:29.509] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:23:34.714] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:23:34.716] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I'm a clinic administrator. How do I add doctors to my clinic?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:23:28.525Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-03767-ow-DOC-005-admin-add-doctor-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    },
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 60930,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 29,
+                          "line": 238
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 29,
+                            "line": 238
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 236 |\u001b[39m         \u001b[32m'profile'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 237 |\u001b[39m       ])\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 238 |\u001b[39m       expect(intentMatched)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 239 |\u001b[39m\n \u001b[90m 240 |\u001b[39m       \u001b[36mawait\u001b[39m resultStore\u001b[33m.\u001b[39msave(prompt\u001b[33m.\u001b[39mcategory\u001b[33m,\u001b[39m evaluation)\u001b[33m;\u001b[39m\n \u001b[90m 241 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:238:29\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:23:45.229] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:23:45.755] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:23:51.935] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:23:51.940] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I'm a clinic administrator. How do I add doctors to my clinic?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:23:44.672Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-03767-ow-DOC-005-admin-add-doctor-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-03767-ow-DOC-005-admin-add-doctor-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 29,
+                        "line": 238
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-f8a35bdbdc35522d7d96",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 212,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Chatbot — Happy Path Prompts",
+          "file": "conversation/appointment-flows.spec.ts",
+          "line": 245,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[HP-001] appointment booking",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13448,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:24:51.813] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:24:52.234] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:24:56.856] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:24:56.856] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I book an appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:24:51.329Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-b50e9afd427571c0d936",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-002] appointment rescheduling",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 64487,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:25:05.283] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:25:05.713] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:25:12.924] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:25:12.925] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I need to reschedule my appointment for next week...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:25:05.067Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-06cf8-02-appointment-rescheduling-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    },
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22913,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:26:11.498] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:26:12.016] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:26:17.925] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:26:17.927] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I need to reschedule my appointment for next week...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:26:10.981Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-06cf8-02-appointment-rescheduling-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-a2809e2a356ec201265a",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-003] appointment cancellation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 56285,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m48585\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m48585\u001b[39m\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:270:30",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                          "column": 30,
+                          "line": 270
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 268 |\u001b[39m\n \u001b[90m 269 |\u001b[39m       expect(turn\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 270 |\u001b[39m       expect(turn\u001b[33m.\u001b[39mlatencyMs)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\n \u001b[90m     |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 271 |\u001b[39m         \u001b[33mFrameworkConfig\u001b[39m\u001b[33m.\u001b[39mscoring\u001b[33m.\u001b[39mlatency\u001b[33m.\u001b[39mfailing\n \u001b[90m 272 |\u001b[39m       )\u001b[33m;\u001b[39m\n \u001b[90m 273 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                            "column": 30,
+                            "line": 270
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m48585\u001b[39m\n\n\u001b[0m \u001b[90m 268 |\u001b[39m\n \u001b[90m 269 |\u001b[39m       expect(turn\u001b[33m.\u001b[39mbotResponse\u001b[33m.\u001b[39mtrim()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 270 |\u001b[39m       expect(turn\u001b[33m.\u001b[39mlatencyMs)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\n \u001b[90m     |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 271 |\u001b[39m         \u001b[33mFrameworkConfig\u001b[39m\u001b[33m.\u001b[39mscoring\u001b[33m.\u001b[39mlatency\u001b[33m.\u001b[39mfailing\n \u001b[90m 272 |\u001b[39m       )\u001b[33m;\u001b[39m\n \u001b[90m 273 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:270:30\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:26:36.413] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:26:36.847] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:26:41.419] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:26:41.419] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I cancel an upcoming appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:26:36.216Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-48ac9-03-appointment-cancellation-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts",
+                        "column": 30,
+                        "line": 270
+                      }
+                    },
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 21544,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:27:34.520] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:27:35.087] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:27:40.624] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:27:40.626] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I cancel an upcoming appointment?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:27:34.034Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-48ac9-03-appointment-cancellation-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-d2dbed6947201540a6c6",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-004] view appointments",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16005,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:27:57.985] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:27:58.360] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:28:05.419] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:28:05.420] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"Can I see my upcoming appointments?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:27:57.825Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-b8e41a38e1a43a828795",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-005] platform information",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 75098,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:28:14.113] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:28:14.692] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:28:22.170] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:28:22.171] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What services does this platform offer?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:28:13.859Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-bd387-HP-005-platform-information-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    },
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 104115,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:29:31.120] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:29:31.662] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:29:39.596] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:29:39.599] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What services does this platform offer?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:29:30.612Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-bd387-HP-005-platform-information-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-fa9d41d0009ac3125a8f",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-006] profile management",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15804,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:31:22.408] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:22.836] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:28.881] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:28.883] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I update my profile information?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:31:21.894Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-447b94282ab2045f7a41",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-007] password reset",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14182,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:31:38.260] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:38.691] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:43.306] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:43.307] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"I forgot my password, how do I reset it?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:31:38.022Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-c7cb4fa1c000dd32d263",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-008] find doctor",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 30644,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:31:52.467] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:52.956] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:57.586] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:31:57.587] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How do I find a doctor near me?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:31:52.232Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-b9e0b116d6e85c7214d4",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-009] clinic hours",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 39541,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:32:23.072] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:32:23.431] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:32:30.456] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:32:30.457] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"What are the clinic hours?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:32:22.911Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-18f30123ac709d965071",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            },
+            {
+              "title": "[HP-010] contact support",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 51576,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:33:02.721] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:33:03.041] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:33:09.201] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:33:09.201] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How can I contact support?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-11T13:33:02.471Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-66f63-mpts-HP-010-contact-support-chromium-desktop\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    },
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 69803,
+                      "error": {
+                        "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.",
+                        "stack": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\n    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\n    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\n    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\n    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20",
+                        "location": {
+                          "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                          "column": 11,
+                          "line": 310
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                            "column": 11,
+                            "line": 310
+                          },
+                          "message": "Error: Could not find an interactive widget iframe exposing a visible chat input.\n\n\u001b[90m   at \u001b[39m..\\drivers\\ChatbotWidgetDriver.ts:310\n\n\u001b[0m \u001b[90m 308 |\u001b[39m     }\n \u001b[90m 309 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 310 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 311 |\u001b[39m       \u001b[32m'Could not find an interactive widget iframe exposing a visible chat input.'\u001b[39m\n \u001b[90m 312 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 313 |\u001b[39m   }\u001b[0m\n\u001b[2m    at ChatbotWidgetDriver.attachToInteractiveIframe (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:310:11)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.submitMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:523:5)\u001b[22m\n\u001b[2m    at ChatbotWidgetDriver.sendMessage (D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts:99:5)\u001b[22m\n\u001b[2m    at ChatbotWidget.executePrompt (D:\\New folder\\chatbot-testing-framework\\pages\\ChatbotWidget.ts:48:20)\u001b[22m\n\u001b[2m    at D:\\New folder\\chatbot-testing-framework\\tests\\conversation\\appointment-flows.spec.ts:266:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\u001b[34m[13:33:56.309] [INFO] [LandingPage]\u001b[0m Opening landing page: /\n"
+                        },
+                        {
+                          "text": "  [PAGE ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:33:56.969] [INFO] [ChatbotWidgetDriver]\u001b[0m Opening chatbot widget...\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:34:02.324] [INFO] [ChatbotWidgetDriver]\u001b[0m Widget is ready for interaction.\n"
+                        },
+                        {
+                          "text": "\u001b[34m[13:34:02.326] [INFO] [ChatbotWidgetDriver]\u001b[0m Sending message: \"How can I contact support?...\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-11T13:33:55.659Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-66f63-mpts-HP-010-contact-support-chromium-desktop-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\New folder\\chatbot-testing-framework\\test-artifacts\\conversation-appointment-f-66f63-mpts-HP-010-contact-support-chromium-desktop-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\New folder\\chatbot-testing-framework\\drivers\\ChatbotWidgetDriver.ts",
+                        "column": 11,
+                        "line": 310
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "67803c910b9f2aed9a33-33afe1ecf48aacc2ae79",
+              "file": "conversation/appointment-flows.spec.ts",
+              "line": 261,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-11T13:09:41.285Z",
+    "duration": 1527809.926,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 12,
+    "flaky": 2
+  }
+}

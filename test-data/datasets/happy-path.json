@@ -1,0 +1,82 @@
+[
+  {
+    "id": "HP-001",
+    "prompt": "How do I book an appointment?",
+    "expectedIntent": "appointment booking",
+    "expectedKeywords": ["book", "appointment", "schedule", "available"],
+    "category": "appointment-booking",
+    "tags": ["happy-path", "core-feature"]
+  },
+  {
+    "id": "HP-002",
+    "prompt": "I need to reschedule my appointment for next week",
+    "expectedIntent": "appointment rescheduling",
+    "expectedKeywords": ["reschedule", "appointment", "change", "new time"],
+    "category": "appointment-rescheduling",
+    "tags": ["happy-path", "core-feature"]
+  },
+  {
+    "id": "HP-003",
+    "prompt": "How do I cancel an upcoming appointment?",
+    "expectedIntent": "appointment cancellation",
+    "expectedKeywords": ["cancel", "appointment", "cancellation"],
+    "category": "appointment-cancellation",
+    "tags": ["happy-path", "core-feature"]
+  },
+  {
+    "id": "HP-004",
+    "prompt": "Can I see my upcoming appointments?",
+    "expectedIntent": "view appointments",
+    "expectedKeywords": ["appointment", "upcoming", "view", "schedule"],
+    "category": "happy-path",
+    "tags": ["happy-path"]
+  },
+  {
+    "id": "HP-005",
+    "prompt": "What services does this platform offer?",
+    "expectedIntent": "platform information",
+    "expectedKeywords": ["service", "platform", "offer", "feature"],
+    "category": "platform-navigation",
+    "tags": ["happy-path", "onboarding"]
+  },
+  {
+    "id": "HP-006",
+    "prompt": "How do I update my profile information?",
+    "expectedIntent": "profile management",
+    "expectedKeywords": ["profile", "update", "information", "settings"],
+    "category": "platform-navigation",
+    "tags": ["happy-path"]
+  },
+  {
+    "id": "HP-007",
+    "prompt": "I forgot my password, how do I reset it?",
+    "expectedIntent": "password reset",
+    "expectedKeywords": ["password", "reset", "forgot", "email", "link"],
+    "category": "general-support",
+    "tags": ["happy-path", "auth"]
+  },
+  {
+    "id": "HP-008",
+    "prompt": "How do I find a doctor near me?",
+    "expectedIntent": "find doctor",
+    "expectedKeywords": ["doctor", "find", "location", "specialist", "search"],
+    "category": "healthcare-query",
+    "tags": ["happy-path", "doctor-search"]
+  },
+  {
+    "id": "HP-009",
+    "prompt": "What are the clinic hours?",
+    "expectedIntent": "clinic hours",
+    "expectedKeywords": ["hours", "open", "clinic", "available", "time"],
+    "category": "healthcare-query",
+    "tags": ["happy-path"]
+  },
+  {
+    "id": "HP-010",
+    "prompt": "How can I contact support?",
+    "expectedIntent": "contact support",
+    "expectedKeywords": ["contact", "support", "help", "team", "reach"],
+    "category": "general-support",
+    "tags": ["happy-path"]
+  }
+]

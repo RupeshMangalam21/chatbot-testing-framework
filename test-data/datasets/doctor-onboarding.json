@@ -1,0 +1,42 @@
+[
+  {
+    "id": "DOC-001",
+    "prompt": "How do I register as a doctor on this platform?",
+    "expectedIntent": "doctor registration",
+    "expectedKeywords": ["register", "doctor", "sign up", "onboard", "profile"],
+    "category": "doctor-onboarding",
+    "tags": ["doctor", "onboarding"]
+  },
+  {
+    "id": "DOC-002",
+    "prompt": "What documents do I need to submit for doctor verification?",
+    "expectedIntent": "doctor verification documents",
+    "expectedKeywords": ["documents", "verification", "license", "credentials", "submit"],
+    "category": "doctor-onboarding",
+    "tags": ["doctor", "verification"]
+  },
+  {
+    "id": "DOC-003",
+    "prompt": "How long does the doctor approval process take?",
+    "expectedIntent": "doctor approval timeline",
+    "expectedKeywords": ["approval", "time", "days", "process", "review"],
+    "category": "doctor-onboarding",
+    "tags": ["doctor", "timeline"]
+  },
+  {
+    "id": "DOC-004",
+    "prompt": "How do I set my availability as a doctor?",
+    "expectedIntent": "doctor availability management",
+    "expectedKeywords": ["availability", "schedule", "hours", "slots", "set"],
+    "category": "doctor-onboarding",
+    "tags": ["doctor", "scheduling"]
+  },
+  {
+    "id": "DOC-005",
+    "prompt": "I'm a clinic administrator. How do I add doctors to my clinic?",
+    "expectedIntent": "admin add doctor",
+    "expectedKeywords": ["admin", "clinic", "add", "doctor", "manage"],
+    "category": "doctor-onboarding",
+    "tags": ["admin", "clinic-management"]
+  }
+]

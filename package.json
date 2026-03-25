@@ -1,0 +1,42 @@
+{
+  "name": "chatbot-testing-framework",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright testing framework for AI chatbot evaluation",
+  "scripts": {
+    "chatbot:test": "playwright test",
+    "chatbot:test:ui": "playwright test tests/ui/",
+    "chatbot:test:conversation": "playwright test tests/conversation/",
+    "chatbot:test:safety": "playwright test tests/safety/",
+    "chatbot:test:latency": "playwright test tests/latency/",
+    "chatbot:test:regression": "playwright test tests/regression/",
+    "chatbot:test:edge": "playwright test tests/edge-cases/",
+    "chatbot:test:headed": "playwright test --headed",
+    "chatbot:debug": "ts-node scripts/debug-widget.ts",
+    "chatbot:diagnose": "ts-node scripts/diagnose.ts",
+    "chatbot:selectors": "ts-node scripts/discover-selectors.ts",
+    "chatbot:report": "ts-node scripts/generate-report.ts",
+    "chatbot:baseline": "ts-node scripts/capture-baseline.ts",
+    "chatbot:open-report": "playwright show-report",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.0"
+  },
+  "dependencies": {
+    "natural": "^6.12.0",
+    "string-similarity": "^4.0.4",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.5",
+    "handlebars": "^4.7.8",
+    "openai": "^4.40.0",
+    "@anthropic-ai/sdk": "^0.21.0",
+    "zod": "^3.23.4"
+  }
+}
