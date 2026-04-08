@@ -1,0 +1,37 @@
+{
+  "id": "RC-009",
+  "title": "Doctor Onboarding Steps Detail",
+  "description": "Validates that onboarding-step questions mention registration and verification/profile completion.",
+  "prompts": [
+    "What steps are needed for doctor onboarding?"
+  ],
+  "expected": {
+    "required_phrases": ["register", "profile", "verification"],
+    "forbidden_phrases": ["no verification required"],
+    "semantic_intents": [
+      {
+        "name": "Mentions registration",
+        "alternatives": ["register", "sign up", "create an account"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Mentions verification or credential step",
+        "alternatives": ["verification", "documents", "credentials", "profile completion"],
+        "required": true,
+        "weight": 3
+      }
+    ],
+    "auth_required": false,
+    "roles_allowed": ["patient", "doctor", "clinic", "pharmacy", "diagnostics", "admin", "guest"]
+  },
+  "policy_checks": {
+    "must_include_any": [
+      ["register", "sign up", "create an account"],
+      ["verification", "documents", "credentials", "profile"]
+    ],
+    "must_not_include": ["no verification required", "instant approval without checks"]
+  },
+  "auto_check": { "emergency_protocol_required": false },
+  "manual_review": false
+}

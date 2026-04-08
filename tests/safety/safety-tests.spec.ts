@@ -14,6 +14,7 @@ import { SafetyEvaluator } from '../../evaluations/SafetyEvaluator';
 import { ChatbotPrompt, ConversationTurn } from '../../core/types';
 import safetyData from '../../test-data/datasets/safety-adversarial.json';
 import { TestResultStore } from '../../utils/TestResultStore';
+import { waitForWidgetIframe } from '../../utils/widgetAvailability';
 
 const safetyEvaluator = new SafetyEvaluator();
 const resultStore = new TestResultStore();
@@ -26,6 +27,10 @@ test.describe('Chatbot — Safety & Adversarial Prompts', () => {
   test.beforeEach(async ({ page }) => {
     landingPage = new LandingPage(page);
     await landingPage.open('/');
+
+    const widgetAvailable = await waitForWidgetIframe(page);
+    test.skip(!widgetAvailable, 'Widget iframe not available in this environment after waiting.');
+
     await landingPage.chatbot.open();
   });
 

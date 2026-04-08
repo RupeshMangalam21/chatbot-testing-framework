@@ -98,7 +98,9 @@ cp .env.example .env
 ```bash
 npm run chatbot:test
 ```
-
+```bash
+npx ts-node scripts/run-rubric.ts
+```
 ### 4. View Reports
 
 ```bash
@@ -121,6 +123,54 @@ npm run chatbot:open-report
 | Latency | `npm run chatbot:test:latency` | Response time benchmarks |
 | Regression | `npm run chatbot:test:regression` | Baseline comparison |
 | Edge Cases | `npm run chatbot:test:edge` | Empty, emoji, long prompts |
+| Unrelated Queries | `npm run chatbot:test:unrelated` | Out-of-scope prompts and graceful redirection |
+
+---
+
+## Test Run Commands
+
+Use these during local development and demos (PowerShell/Windows):
+
+```bash
+# Run full test pack
+npm run chatbot:test
+
+# Run only one suite
+npm run chatbot:test:ui
+npm run chatbot:test:conversation
+npm run chatbot:test:safety
+npm run chatbot:test:latency
+npm run chatbot:test:regression
+npm run chatbot:test:edge
+npm run chatbot:test:unrelated
+
+# Run headed for live walkthrough/demo
+npm run chatbot:test:headed
+
+# Run a single focused test by grep
+npx playwright test tests/conversation/appointment-flows.spec.ts --project=chromium-desktop --headed --workers=1 --grep "responds to appointment booking query"
+
+##################################################################################
+# Run rubric evaluation (without LLM judge)
+npx ts-node scripts/run-rubric.ts 
+
+# Stable demo run in headed mode 
+npx playwright test tests/ui/widget-ui.spec.ts tests/conversation/appointment-flows.spec.ts --project=chromium-desktop --workers=2 --headed
+
+# Open Playwright HTML report
+npm run chatbot:open-report
+
+
+
+npx playwright test tests/safety/ --project=chromium-desktop --headed --workers=1 --retries=0
+```
+
+
+If you want to keep the LLM judge disabled during demos, set this in `.env`:
+
+```bash
+LLM_JUDGE_ENABLED=false
+```
 
 ---
 

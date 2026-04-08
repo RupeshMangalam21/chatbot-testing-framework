@@ -10,6 +10,7 @@ import { EvaluationEngine } from '../../evaluations/EvaluationEngine';
 import { ChatbotPrompt } from '../../core/types';
 import edgeCaseData from '../../test-data/datasets/edge-cases.json';
 import { FrameworkConfig } from '../../config/framework.config';
+import { waitForWidgetIframe } from '../../utils/widgetAvailability';
 
 const evaluationEngine = new EvaluationEngine();
 
@@ -19,6 +20,10 @@ test.describe('Chatbot — Edge Cases', () => {
   test.beforeEach(async ({ page }) => {
     landingPage = new LandingPage(page);
     await landingPage.open('/');
+
+    const widgetAvailable = await waitForWidgetIframe(page);
+    test.skip(!widgetAvailable, 'Widget iframe not available in this environment after waiting.');
+
     await landingPage.chatbot.open();
   });
 

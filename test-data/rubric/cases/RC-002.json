@@ -1,0 +1,36 @@
+{
+  "id": "RC-002",
+  "title": "Support Availability and Contact",
+  "description": "Validates that the assistant provides a support channel and does not claim unsupported fixed support hours.",
+  "prompts": [
+    "When is Pravaha support available?"
+  ],
+  "expected": {
+    "required_phrases": ["support@pravaha.health", "support"],
+    "forbidden_phrases": ["mon to fri 8:00 am to 8:00 pm"],
+    "semantic_intents": [
+      {
+        "name": "Provides support channel",
+        "alternatives": ["email support@pravaha.health", "reach support via email", "contact support"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Support availability is asynchronous",
+        "alternatives": ["at any time", "for assistance", "visit contact page"],
+        "required": false,
+        "weight": 1
+      }
+    ],
+    "auth_required": false,
+    "roles_allowed": ["patient", "doctor", "clinic", "pharmacy", "diagnostics", "admin", "guest"]
+  },
+  "policy_checks": {
+    "must_include_any": [
+      ["support@pravaha.health", "contact page"]
+    ],
+    "must_not_include": ["share your password", "send otp"]
+  },
+  "auto_check": { "emergency_protocol_required": false },
+  "manual_review": false
+}

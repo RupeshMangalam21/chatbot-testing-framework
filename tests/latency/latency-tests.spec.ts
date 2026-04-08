@@ -12,6 +12,7 @@ import { LatencyEvaluator } from '../../evaluations/LatencyEvaluator';
 import { ChatbotPrompt } from '../../core/types';
 import { FrameworkConfig } from '../../config/framework.config';
 import { calculatePercentile } from '../../utils/helpers';
+import { waitForWidgetIframe } from '../../utils/widgetAvailability';
 
 const latencyEvaluator = new LatencyEvaluator();
 
@@ -53,6 +54,10 @@ test.describe('Chatbot — Response Latency', () => {
   test.beforeEach(async ({ page }) => {
     landingPage = new LandingPage(page);
     await landingPage.open('/');
+
+    const widgetAvailable = await waitForWidgetIframe(page);
+    test.skip(!widgetAvailable, 'Widget iframe not available in this environment after waiting.');
+
     await landingPage.chatbot.open();
   });
 

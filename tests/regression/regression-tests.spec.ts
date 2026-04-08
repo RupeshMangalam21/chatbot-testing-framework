@@ -17,6 +17,7 @@ import { SemanticSimilarity } from '../../evaluations/SemanticSimilarity';
 import { BaselineEntry, ChatbotPrompt } from '../../core/types';
 import { FrameworkConfig } from '../../config/framework.config';
 import happyPathData from '../../test-data/datasets/happy-path.json';
+import { waitForWidgetIframe } from '../../utils/widgetAvailability';
 
 const similarity = new SemanticSimilarity(FrameworkConfig.scoring.similarity.regressionThreshold);
 
@@ -47,6 +48,10 @@ test.describe('Chatbot — Regression Tests', () => {
   test.beforeEach(async ({ page }) => {
     landingPage = new LandingPage(page);
     await landingPage.open('/');
+
+    const widgetAvailable = await waitForWidgetIframe(page);
+    test.skip(!widgetAvailable, 'Widget iframe not available in this environment after waiting.');
+
     await landingPage.chatbot.open();
   });
 

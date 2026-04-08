@@ -33,6 +33,11 @@ type CandidateFrame = {
   frame: FrameLocator;
 };
 
+type MessageCandidate = {
+  text: string;
+  score: number;
+};
+
 export class ChatbotWidgetDriver {
   private readonly page: Page;
   private readonly logger: Logger;
@@ -185,6 +190,87 @@ export class ChatbotWidgetDriver {
     }
 
     return false;
+  }
+
+  private isTransientBotText(text: string): boolean {
+    const lower = text.trim().toLowerCase();
+    if (!lower) return true;
+
+    return (
+      lower === 'hello' ||
+      lower === 'send' ||
+      lower === 'write a message…' ||
+      lower === 'write a message...' ||
+      lower.length < 2 ||
+      lower === 'typing' ||
+      lower === 'typing...' ||
+      /\bis typing\b/.test(lower) ||
+      /^powered by\b/.test(lower) ||
+      /^write a message/.test(lower) ||
+      /^send( a message)?$/.test(lower) ||
+      /^chat$/.test(lower) ||
+      /^close$/.test(lower) ||
+      /^read$/.test(lower) ||
+      /^learn more$/.test(lower) ||
+      /^contact( us)?$/.test(lower) ||
+      lower === 'launcher'
+    );
+  }
+
+  private scoreBotTextCandidate(text: string): number {
+    const normalized = text.trim();
+    if (!normalized || this.isTransientBotText(normalized)) return -100;
+
+    const lower = normalized.toLowerCase();
+    let score = 0;
+
+    if (normalized.length >= 20) score += 4;
+    if (normalized.length >= 60) score += 4;
+    if (normalized.split(/\s+/).length >= 5) score += 3;
+    if (/[.!?]/.test(normalized)) score += 2;
+    if (/\b(appointment|support|clinic|doctor|hours|available|email)\b/.test(lower)) score += 2;
+
+    if (/^(read|open|close|send|chat)$/i.test(normalized)) score -= 10;
+    if (normalized.length <= 6) score -= 6;
+
+    return score;
+  }
+
+  private async collectBotMessageCandidates(
+    candidate: CandidateFrame,
+    selectors: string[]
+  ): Promise<MessageCandidate[]> {
+    const collected: MessageCandidate[] = [];
+
+    for (const selector of selectors) {
+      try {
+        const nodes = candidate.frame.locator(selector);
+        const count = await nodes.count();
+
+        // Sample recent nodes first; latest widget responses are usually near the end.
+        const start = Math.max(0, count - 20);
+        for (let i = count - 1; i >= start; i--) {
+          const node = nodes.nth(i);
+          const visible = await node.isVisible().catch(() => false);
+          if (!visible) continue;
+
+          const tagName = (
+            (await node.evaluate(el => el.tagName.toLowerCase()).catch(() => '')) || ''
+          ).trim();
+          if (tagName === 'button' || tagName === 'a') continue;
+
+          const text = ((await node.textContent().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+          const score = this.scoreBotTextCandidate(text);
+          if (score <= 0) continue;
+
+          collected.push({ text, score });
+        }
+      } catch {
+        // continue
+      }
+    }
+
+    return collected;
   }
 
   private async waitForReactHydration(): Promise<void> {
@@ -623,59 +709,41 @@ export class ChatbotWidgetDriver {
   private async getLastBotMessageAcrossFrames(): Promise<string | null> {
     const frames = await this.getCandidateFrames();
 
-    const candidateSelectors = [
+    const strictSelectors = [
       FrameworkConfig.widget.internal.botMessage,
       '[data-author="agent"]',
       '[data-is-own-message="false"]',
       '[data-lc-id*="message"]',
       '[class*="message"]',
+    ];
+
+    const fallbackSelectors = [
       'li',
       'p',
       'div',
     ];
 
-    let best: string | null = null;
+    let best: MessageCandidate | null = null;
 
     for (const candidate of frames) {
-      for (const selector of candidateSelectors) {
-        try {
-          const nodes = candidate.frame.locator(selector);
-          const count = await nodes.count();
-
-          for (let i = count - 1; i >= 0; i--) {
-            const node = nodes.nth(i);
-            const visible = await node.isVisible().catch(() => false);
-            if (!visible) continue;
-
-            const text = ((await node.textContent().catch(() => '')) || '').trim();
-            if (!text) continue;
-
-            const lower = text.toLowerCase();
-
-            if (
-              lower === 'hello' ||
-              lower === 'send' ||
-              lower === 'write a message…' ||
-              lower === 'write a message...' ||
-              lower.length < 2
-            ) {
-              continue;
-            }
-
-            best = text;
-            break;
-          }
-
-          if (best) break;
-        } catch {
-          // continue
+      const strictCandidates = await this.collectBotMessageCandidates(candidate, strictSelectors);
+      for (const hit of strictCandidates) {
+        if (!best || hit.score > best.score) {
+          best = hit;
         }
       }
 
-      if (best) break;
+      if (!best || best.score < 6) {
+        const fallbackCandidates = await this.collectBotMessageCandidates(candidate, fallbackSelectors);
+        for (const hit of fallbackCandidates) {
+          if (!best || hit.score > best.score) {
+            best = hit;
+          }
+        }
+      }
     }
 
-    return best;
+    return best?.text || null;
   }
 
   private async getBotMessageCountAcrossFrames(): Promise<number> {
@@ -721,34 +789,11 @@ export class ChatbotWidgetDriver {
     const seen = new Set<string>();
 
     for (const candidate of frames) {
-      for (const selector of candidateSelectors) {
-        try {
-          const nodes = candidate.frame.locator(selector);
-          const count = await nodes.count();
-
-          for (let i = 0; i < count; i++) {
-            const node = nodes.nth(i);
-            const visible = await node.isVisible().catch(() => false);
-            if (!visible) continue;
-
-            const text = ((await node.textContent().catch(() => '')) || '').trim();
-            if (!text || seen.has(text)) continue;
-
-            const lower = text.toLowerCase();
-            if (
-              lower === 'send' ||
-              lower === 'write a message…' ||
-              lower === 'write a message...'
-            ) {
-              continue;
-            }
-
-            seen.add(text);
-            results.push(text);
-          }
-        } catch {
-          // continue
-        }
+      const candidates = await this.collectBotMessageCandidates(candidate, candidateSelectors);
+      for (const hit of candidates) {
+        if (seen.has(hit.text)) continue;
+        seen.add(hit.text);
+        results.push(hit.text);
       }
     }
 

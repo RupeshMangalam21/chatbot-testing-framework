@@ -5,7 +5,7 @@ dist/
 # Test artifacts
 playwright-report/
 test-artifacts/
-chatbot-reports/evaluations/
+chatbot-reports/
 
 # Baselines — commit only when intentionally updating
 test-data/baselines/

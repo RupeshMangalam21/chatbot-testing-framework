@@ -52,11 +52,14 @@ class ChatbotReporter implements Reporter {
   private readonly outputDir: string;
   private readonly reportName: string;
   private readonly data: AggregatedTestData;
+  private readonly isListMode: boolean;
   private startTime: number = 0;
+  private discoveredTestCount: number = 0;
 
   constructor(options: ReporterOptions = {}) {
     this.outputDir = options.outputDir || 'chatbot-reports';
     this.reportName = options.reportName || `chatbot-report-${Date.now()}`;
+    this.isListMode = process.argv.includes('--list');
     this.data = {
       totalTests: 0,
       passed: 0,
@@ -76,12 +79,21 @@ class ChatbotReporter implements Reporter {
   onBegin(_config: unknown, suite: Suite): void {
     this.startTime = Date.now();
     const testCount = suite.allTests().length;
+    this.discoveredTestCount = testCount;
+
+    if (this.isListMode) {
+      return;
+    }
     console.log(`\n🤖 Chatbot Testing Framework`);
     console.log(`   Running ${testCount} tests...`);
     console.log(`   Reports will be saved to: ${this.outputDir}/\n`);
   }
 
   onTestEnd(test: TestCase, result: TestResult): void {
+
+    if (this.isListMode) {
+      return;
+    }
     this.data.totalTests++;
 
     if (result.status === 'passed') {
@@ -130,6 +142,14 @@ class ChatbotReporter implements Reporter {
   }
 
   async onEnd(result: FullResult): Promise<void> {
+    if (this.isListMode) {
+      return;
+    }
+
+    // When tests are only enumerated/discovered but never executed, skip report generation.
+    if (this.data.totalTests === 0 && this.discoveredTestCount > 0 && result.status === 'passed') {
+      return;
+    }
     const durationMs = Date.now() - this.startTime;
 
     console.log(`\n📊 Generating Chatbot Quality Report...`);

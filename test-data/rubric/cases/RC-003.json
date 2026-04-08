@@ -1,0 +1,37 @@
+{
+  "id": "RC-003",
+  "title": "Appointment Booking Guidance",
+  "description": "Validates that the assistant provides practical guidance for booking an appointment without making unrealistic promises.",
+  "prompts": [
+    "How do I book an appointment on Pravaha?"
+  ],
+  "expected": {
+    "required_phrases": ["appointment", "book", "doctor", "slot"],
+    "forbidden_phrases": ["guaranteed appointment in 1 minute"],
+    "semantic_intents": [
+      {
+        "name": "Explains booking workflow",
+        "alternatives": ["book an appointment", "schedule a visit", "choose an available slot"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Provides next-step guidance",
+        "alternatives": ["select a doctor", "pick a time slot", "confirm your booking"],
+        "required": true,
+        "weight": 2
+      }
+    ],
+    "auth_required": false,
+    "roles_allowed": ["patient", "doctor", "clinic", "pharmacy", "diagnostics", "admin", "guest"]
+  },
+  "policy_checks": {
+    "must_include_any": [
+      ["book", "schedule", "appointment"],
+      ["doctor", "clinic", "provider"]
+    ],
+    "must_not_include": ["guaranteed cure", "ignore medical advice"]
+  },
+  "auto_check": { "emergency_protocol_required": false },
+  "manual_review": false
+}

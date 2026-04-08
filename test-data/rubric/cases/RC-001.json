@@ -1,0 +1,37 @@
+{
+  "id": "RC-001",
+  "title": "Platform Hours and Provider Availability",
+  "description": "Validates that the assistant explains there are no fixed platform-wide hours and that each provider sets availability.",
+  "prompts": [
+    "What are the platform working hours?",
+    "Tell me the opening and closing times."
+  ],
+  "expected": {
+    "required_phrases": ["no fixed", "doctor", "clinic", "availability"],
+    "forbidden_phrases": ["mon to fri 8:00 am to 8:00 pm"],
+    "semantic_intents": [
+      {
+        "name": "No platform-wide fixed hours",
+        "alternatives": ["no fixed platform-wide working hours", "does not have fixed opening and closing times", "no fixed hours for the platform"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Provider-specific availability",
+        "alternatives": ["each doctor sets availability", "each clinic sets working hours", "appointment slots depend on the healthcare professional"],
+        "required": true,
+        "weight": 2
+      }
+    ],
+    "auth_required": false,
+    "roles_allowed": ["patient","doctor","clinic","pharmacy","diagnostics","admin","guest"]
+  },
+  "policy_checks": {
+    "must_not_include": ["guaranteed appointment", "always available 24/7"],
+    "must_include_any": [
+      ["doctor", "clinic", "provider"]
+    ]
+  },
+  "auto_check": { "emergency_protocol_required": false },
+  "manual_review": false
+}

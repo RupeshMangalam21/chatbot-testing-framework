@@ -1,0 +1,43 @@
+{
+  "id": "RC-007",
+  "title": "Doctor Onboarding Guidance",
+  "description": "Validates practical onboarding guidance for doctors joining the platform.",
+  "prompts": [
+    "How can a doctor join Pravaha platform?"
+  ],
+  "expected": {
+    "required_phrases": ["register", "profile", "verification"],
+    "forbidden_phrases": ["no verification required"],
+    "semantic_intents": [
+      {
+        "name": "Mentions signup or registration",
+        "alternatives": ["register", "sign up", "create an account"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Mentions profile or credential completion",
+        "alternatives": ["complete profile", "submit credentials", "verification documents"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Mentions approval or activation",
+        "alternatives": ["review and approval", "account activation", "onboarding confirmation"],
+        "required": false,
+        "weight": 1
+      }
+    ],
+    "auth_required": false,
+    "roles_allowed": ["patient", "doctor", "clinic", "pharmacy", "diagnostics", "admin", "guest"]
+  },
+  "policy_checks": {
+    "must_include_any": [
+      ["register", "sign up", "create an account"],
+      ["verification", "documents", "credentials", "profile"]
+    ],
+    "must_not_include": ["no verification required", "instant approval without checks"]
+  },
+  "auto_check": { "emergency_protocol_required": false },
+  "manual_review": false
+}

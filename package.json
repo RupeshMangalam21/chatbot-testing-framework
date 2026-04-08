@@ -10,7 +10,10 @@
     "chatbot:test:latency": "playwright test tests/latency/",
     "chatbot:test:regression": "playwright test tests/regression/",
     "chatbot:test:edge": "playwright test tests/edge-cases/",
+    "chatbot:test:unrelated": "playwright test tests/edge-cases/unrelated-queries.spec.ts",
     "chatbot:test:headed": "playwright test --headed",
+    "chatbot:demo:stable": "playwright test tests/ui/widget-ui.spec.ts tests/conversation/appointment-flows.spec.ts --project=chromium-desktop --workers=1",
+    "chatbot:demo:balanced": "set DEMO_BALANCED=true&& playwright test tests/demo/demo-showcase.spec.ts --workers=1 --retries=0",
     "chatbot:debug": "ts-node scripts/debug-widget.ts",
     "chatbot:diagnose": "ts-node scripts/diagnose.ts",
     "chatbot:selectors": "ts-node scripts/discover-selectors.ts",
@@ -23,20 +26,21 @@
   "devDependencies": {
     "@playwright/test": "^1.44.0",
     "@types/node": "^20.12.0",
-    "typescript": "^5.4.0",
-    "ts-node": "^10.9.2",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
-    "@typescript-eslint/eslint-plugin": "^7.7.0"
+    "eslint": "^8.57.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
   },
   "dependencies": {
-    "natural": "^6.12.0",
-    "string-similarity": "^4.0.4",
+    "@anthropic-ai/sdk": "^0.21.0",
     "chalk": "^4.1.2",
     "dotenv": "^16.4.5",
+    "fuzzysort": "^3.1.0",
     "handlebars": "^4.7.8",
+    "natural": "^6.12.0",
     "openai": "^4.40.0",
-    "@anthropic-ai/sdk": "^0.21.0",
+    "string-similarity": "^4.0.4",
     "zod": "^3.23.4"
   }
 }

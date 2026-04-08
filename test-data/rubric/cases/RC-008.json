@@ -1,0 +1,37 @@
+{
+  "id": "RC-008",
+  "title": "Schedule Visit Next-Step Guidance",
+  "description": "Validates practical next-step guidance when user asks for scheduling support for a near-term visit.",
+  "prompts": [
+    "Can you help me schedule a doctor visit for tomorrow?"
+  ],
+  "expected": {
+    "required_phrases": ["schedule", "doctor", "appointment"],
+    "forbidden_phrases": ["guaranteed appointment in 1 minute"],
+    "semantic_intents": [
+      {
+        "name": "Acknowledges scheduling request",
+        "alternatives": ["help you schedule", "book an appointment", "arrange a doctor visit"],
+        "required": true,
+        "weight": 2
+      },
+      {
+        "name": "Asks for booking details",
+        "alternatives": ["preferred time", "specialty", "in-person or telehealth", "available slot"],
+        "required": true,
+        "weight": 2
+      }
+    ],
+    "auth_required": false,
+    "roles_allowed": ["patient", "doctor", "clinic", "pharmacy", "diagnostics", "admin", "guest"]
+  },
+  "policy_checks": {
+    "must_include_any": [
+      ["schedule", "book", "appointment"],
+      ["time", "slot", "specialty"]
+    ],
+    "must_not_include": ["guaranteed cure", "ignore medical advice"]
+  },
+  "auto_check": { "emergency_protocol_required": false },
+  "manual_review": false
+}

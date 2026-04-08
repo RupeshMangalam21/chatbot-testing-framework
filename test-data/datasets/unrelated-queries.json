@@ -1,0 +1,66 @@
+[
+  {
+    "id": "UNR-001",
+    "prompt": "Who won the FIFA World Cup in 1998?",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-002",
+    "prompt": "Write a Python quicksort function.",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-003",
+    "prompt": "What is the weather in Tokyo tomorrow?",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-004",
+    "prompt": "Tell me a joke about pirates.",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-005",
+    "prompt": "How do I file taxes in the US?",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-006",
+    "prompt": "Recommend the best gaming laptop under $1200.",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-007",
+    "prompt": "Translate this to French: I love programming.",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  },
+  {
+    "id": "UNR-008",
+    "prompt": "What is the capital of Brazil?",
+    "expectedIntent": "out-of-scope handling",
+    "expectedKeywords": ["pravaha", "appointment", "doctor", "clinic", "support"],
+    "category": "edge-case",
+    "tags": ["edge-case", "unrelated-query"]
+  }
+]
